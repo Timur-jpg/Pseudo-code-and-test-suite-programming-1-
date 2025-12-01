@@ -1,0 +1,11 @@
+
+/**
+ * Enumeration class Unit - write a description of the enum class here
+ *
+ * @author (your name here)
+ * @version (version number or date here)
+ */
+public enum Unit
+{
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
