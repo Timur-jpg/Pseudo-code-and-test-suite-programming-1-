@@ -16,7 +16,7 @@ public class Ingredients
     public Ingredients()
     {
         // initialise instance variables
-        x = 0;
+        x = 1;
     }
 
     /**
