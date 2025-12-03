@@ -7,27 +7,29 @@
  */
 public class Ingredients
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private String title;
+    private double amount;
+    private Unit unit;
+    
     /**
      * Constructor for objects of class Ingredients
      */
-    public Ingredients()
+    public Ingredients(String title, double amount, Unit unit)
     {
-        // initialise instance variables
-        x = 1;
+        this.title = title;
+        this.amount = amount;
+        this.unit = unit;
+    }
+    
+    public String getTitle() {
+        return title;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public double getAmount() {
+        return amount;
+    }
+
+    public Unit getUnit() {
+        return unit;
     }
 }
