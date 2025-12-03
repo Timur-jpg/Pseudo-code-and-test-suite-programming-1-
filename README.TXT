@@ -20,10 +20,8 @@ Jad:
 
 -RecipeBook
 -Subclasses
--Tag(enum)
 
 Timur:
 
 -Recipe
 -Ingredients
--Unit(enum)
