@@ -57,4 +57,6 @@ public class RecipeBook
         System.out.println("Recipe Book: " + title);
         System.out.println("Total recipes: " + recipes.size());
     }
+    
+    //to add: searchByTitle, searchByType, searchByIngredient, searchByType
 }
