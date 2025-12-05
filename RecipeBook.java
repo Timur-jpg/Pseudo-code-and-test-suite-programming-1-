@@ -52,4 +52,9 @@ public class RecipeBook
             System.out.println(recipes.getTitle());
         }
     }
+    
+        public void printBookDetails() {
+        System.out.println("Recipe Book: " + title);
+        System.out.println("Total recipes: " + recipes.size());
+    }
 }
