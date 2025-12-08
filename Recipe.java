@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Write a description of class Recipe here.
@@ -7,16 +9,21 @@
  */
 public class Recipe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    public String title;
+    public List<Ingredients> ingredients;
+    public List<String> steps;
+    public List<Tag> tags;
 
     /**
      * Constructor for objects of class Recipe
      */
-    public Recipe()
+    public Recipe(String title)
     {
-        // initialise instance variables
-        x = 0;
+        this.title = title;
+        this.ingredients = new ArrayList<>();
+        this.steps = new ArrayList<>();
+        this.tags = new ArrayList<>();
+
     }
 
     /**
@@ -25,9 +32,27 @@ public class Recipe
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public void printDetails()
     {
-        // put your code here
-        return x + y;
+        System.out.println("=== " + title + " ===");
+
+        System.out.println("\nIngredients:");
+        for (Ingredients ing : ingredients) {
+            System.out.println(" - " + ing.toString());
+
+        }
+        
+        System.out.println("\nSteps:");
+        int i = 1;
+        for (String step : steps) {
+            System.out.println(i + ". " + step);
+            i++;
+        }
+        
+        System.out.println("\nTags:");
+        for (Tag t : tags) {
+            System.out.println(" #" + t);
+        }
+        
     }
 }
