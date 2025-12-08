@@ -1,33 +1,16 @@
+public class Drink extends Recipe {
 
-/**
- * Write a description of class Drink here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Drink extends Recipe
-{
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean alcoholic;
 
-    /**
-     * Constructor for objects of class Drink
-     */
-    public Drink()
-    {
-        // initialise instance variables
-        x = 0;
+    public Drink(String title) {
+        super(title);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean isAlcoholic() {
+        return alcoholic;
+    }
+
+    public void setAlcoholic(boolean alcoholic) {
+        this.alcoholic = alcoholic;
     }
 }

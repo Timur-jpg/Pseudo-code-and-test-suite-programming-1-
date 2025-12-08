@@ -1,33 +1,16 @@
+public class MainCourse extends Recipe {
 
-/**
- * Write a description of class MainCourse here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class MainCourse extends Recipe
-{
-    // instance variables - replace the example below with your own
-    private int x;
+    private boolean spicy;
 
-    /**
-     * Constructor for objects of class MainCourse
-     */
-    public MainCourse()
-    {
-        // initialise instance variables
-        x = 0;
+    public MainCourse(String title) {
+        super(title);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean isSpicy() {
+        return spicy;
+    }
+
+    public void setSpicy(boolean spicy) {
+        this.spicy = spicy;
     }
 }
