@@ -25,6 +25,8 @@ public class RecipeBookTest {
 
     @Test
     public void testAddRecipe() {
+        Recipe recipe3 = new Recipe("Salad");
+        book.addRecipe(recipe3);
         assertEquals(2, book.getRecipes().size());
     }
 
