@@ -4,12 +4,17 @@ Tell the reader (someone who does not know anything about this project)
 all they need to know. The comments should usually include at least:
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
+PROJECT TITLE: Jad Dayoub
+PURPOSE OF PROJECT: Organize, add, and remove recipes.
+VERSION or DATE: December 18th 2025
 HOW TO START THIS PROJECT:
-AUTHORS:
+AUTHORS: Jad Dayoub & Timur Turdaliev
 USER INSTRUCTIONS:
+
+
+
+
+
 
 
 
