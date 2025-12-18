@@ -1,5 +1,4 @@
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.List;
@@ -20,11 +19,6 @@ public class RecipeBookTest {
         book.addRecipe(recipe2);
     }
 
-    @AfterEach
-    public void tearDown() {
-        // Optional cleanup
-        book = null;
-    }
 
     @Test
     public void testGetTitle() {
