@@ -1,7 +1,7 @@
 public class Dessert extends Recipe {
-
+    
     private int sweetnessLevel;
-
+    
     public Dessert(String title) {
         super(title);
     }
