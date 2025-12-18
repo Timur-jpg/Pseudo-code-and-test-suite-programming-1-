@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 public class RecipeBookTest {
-
     private RecipeBook book;
     private Recipe recipe1;
     private Recipe recipe2;
