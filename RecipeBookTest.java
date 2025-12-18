@@ -19,6 +19,10 @@ public class RecipeBookTest {
         book.addRecipe(recipe2);
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f83fd67c8be259c46edd373a833c4850989c1a36
     @Test
     public void testGetTitle() {
         assertEquals("My Recipe Book", book.getTitle());
