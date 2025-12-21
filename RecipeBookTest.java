@@ -3,6 +3,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 
+/**
+ * The test class RecipeTest.
+ * @author Jad Dayoub
+ * @version December 21, 2025
+ */
 public class RecipeBookTest {
     private RecipeBook book;
     private Recipe recipe1;
