@@ -27,6 +27,7 @@ public class Driver {
             System.out.println("8) Print recipe details");
             System.out.println("9) Rate a recipe");
             System.out.println("10) Scale recipe servings");
+            System.out.println("11) Rename Recipe book");
             System.out.println("---------------------------------------");
             System.out.println("0) Exit");
             System.out.println("=======================================");
@@ -93,6 +94,17 @@ public class Driver {
 
                 case "10":
                     scaleRecipe(book, scanner);
+                    break;
+                    
+                case "11":
+                    System.out.print("Enter new recipe book title: ");
+                    String newTitle = scanner.nextLine();
+                    if (newTitle.isEmpty()) {
+                        System.out.println("Title cannot be empty.");
+                    } else {
+                        book.setTitle(newTitle);
+                        System.out.println("Recipe book renamed.");
+                    }
                     break;
 
                 case "0":
