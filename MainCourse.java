@@ -1,3 +1,7 @@
+/**
+ * Represents a main course recipe.
+ * Main course may be spicy.
+ */
 public class MainCourse extends Recipe {
 
     private boolean spicy;

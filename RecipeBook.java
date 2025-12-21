@@ -1,18 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 /**
- * Write a description of class RecipeBook here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Represents collection of recipes.
+ * Allows user to add, remove, list and search recipes.
+ * @author Jad Dayoub & Timur Turdaliev
+ * @version December 21, 2025
  */
 public class RecipeBook
 {
     private String title;
     private List<Recipe> recipes;
-
     /**
-     * Constructor
+     * Creates new recipe book.
      */
     public RecipeBook(String title)
     {
@@ -33,10 +32,16 @@ public class RecipeBook
         return recipes;
     }
     
+    /**
+     * Adds a recipe to the recipe book.
+     */
     public void addRecipe(Recipe recipe) {
         recipes.add(recipe);
     }
     
+    /**
+     * Removes a recipe by title.
+     */
     public boolean removeRecipe(String title) {
         for (int i = 0; i < recipes.size(); i++) {
             if (recipes.get(i).getTitle().equals(title)) {
@@ -47,6 +52,9 @@ public class RecipeBook
         return false;
     }
     
+    /**
+     * Prints the titles of all the recipes in the book.
+     */
     public void listAllRecipes() {
         for (Recipe recipe : recipes) {
             System.out.println(recipe.getTitle());
@@ -58,6 +66,9 @@ public class RecipeBook
         System.out.println("Total recipes: " + recipes.size());
     }
     
+    /**
+     * Searches for recipes of given title.
+     */
     public List<Recipe> searchByTitle(String title) {
         List<Recipe> results = new ArrayList<>();
         for (Recipe recipe : recipes) {
@@ -68,6 +79,9 @@ public class RecipeBook
         return results;
     }
     
+    /**
+     * Searches for recipes of specified class.
+     */
     public List<Recipe> searchByType(Class type) {
         List<Recipe> results = new ArrayList<>();
         for (Recipe recipe : recipes) {
@@ -78,6 +92,9 @@ public class RecipeBook
         return results;
     }
     
+    /** 
+     * Searches for recipes containing a specific ingredient.
+    */
     public List<Recipe> searchByIngredient(String ingredientName) {
         List<Recipe> results = new ArrayList<>();
         for (Recipe recipe : recipes) {
@@ -88,6 +105,9 @@ public class RecipeBook
         return results;
     }
     
+    /**
+     * Searches for recipes with a specific tag.
+     */
     public List<Recipe> searchByTag(Tag tag) {
         List<Recipe> results = new ArrayList<>();
         for (Recipe recipe : recipes) {
@@ -97,5 +117,4 @@ public class RecipeBook
         }
         return results;
     }
-    //Methods to be declared in Recipe class
 }

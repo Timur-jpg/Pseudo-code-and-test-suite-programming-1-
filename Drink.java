@@ -1,3 +1,7 @@
+/**
+ * Represents a drink recipe.
+ * A drink may be alcoholic or non-alcoholic.
+ */
 public class Drink extends Recipe {
 
     private boolean alcoholic;

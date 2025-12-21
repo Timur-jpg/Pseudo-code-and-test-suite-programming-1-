@@ -2,7 +2,7 @@ PROJECT TITLE: Your Recipe Book!
 AUTHORS: Jad Dayoub & Timur Turdaliev
 
 PURPOSE OF PROJECT: Organize, add, and remove recipes.
-VERSION or DATE: December 18th 2025
+VERSION or DATE: December 21, 2025
 
 HOW TO START THIS PROJECT:
 1. Open command prompt.

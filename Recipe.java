@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Write a description of class Recipe here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Reprensents a cooking recipe, containing title, ingredients, preparation steps, tags,
+ * servings information, and user ratings.
+ * @author Jad Dayoub & Timur Turdaliev
+ * @version December 21, 2025
  */
 public class Recipe
 {
@@ -17,7 +17,7 @@ public class Recipe
     private int servings;
     
     /**
-     * Constructor for objects of class Recipe
+     * Creates new recipe with given title.
      */
     public Recipe(String title)
     {
@@ -32,7 +32,10 @@ public class Recipe
     public String getTitle() {
         return title;
     }
-
+    
+    /**
+     * Checks if the recipe contains given ingredient.
+     */
     public boolean containsIngredient(String ingredientName) {
         for (Ingredients ing : ingredients) {
             if (ing.getTitle().equals(ingredientName)) {
@@ -41,7 +44,10 @@ public class Recipe
         }
         return false;
     }
-
+    
+    /**
+     * Checks if recipe has said tags.
+     */
     public boolean hasTag(Tag tag) {
         return tags.contains(tag);
     }
@@ -49,7 +55,9 @@ public class Recipe
     public void addIngredient(Ingredients ingredient) {
         ingredients.add(ingredient);
     }
-
+    /**
+     * Removes an ingredient by name.
+     */
     public boolean removeIngredient(String name) {
         for (int i = 0; i < ingredients.size(); i++) {
             if (ingredients.get(i).getTitle().equals(name)) {
@@ -63,7 +71,10 @@ public class Recipe
     public void addStep(String step) {
         steps.add(step);
     }
-
+    
+    /**
+     * Removes step by given step.
+     */
     public boolean removeStep(int i) {
         if (i >= 0 && i < steps.size()) {
             steps.remove(i);
@@ -80,7 +91,7 @@ public class Recipe
     }
 
     /**
-     * Scales ingredient amounts to a new number of servings.
+     * Scales ingredient amounts to new number of servings.
      */
     public void scaleServings(int newServings) {
         if (newServings <= 0) return;
@@ -92,9 +103,8 @@ public class Recipe
         servings = newServings;
     }
     
-        /**
-     * Adds a rating for this recipe.
-     * Rating must be between 1 and 5.
+     /**
+     * Adds a rating between 1 and 5 for recipe.
      */
     public void addRating(int rating) {
         if (rating >= 1 && rating <= 5) {
@@ -109,7 +119,6 @@ public class Recipe
         if (ratings.isEmpty()) {
             return 0.0;
         }
-
         int sum = 0;
         for (int r : ratings) {
             sum += r;
@@ -118,10 +127,7 @@ public class Recipe
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Prints recipe details.
      */
     public void printDetails()
     {

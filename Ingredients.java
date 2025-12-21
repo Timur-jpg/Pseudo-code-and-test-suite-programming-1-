@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Ingredients here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Represents an ingredient in a recipe.
+ * Store name, amount, and unit.
+ * @author Timur Turdaliev & Jad Dayoub
+ * @version December 21, 2025
  */
 public class Ingredients
 {
@@ -12,7 +12,7 @@ public class Ingredients
     private Unit unit;
     
     /**
-     * Constructor for objects of class Ingredients
+     * Creates new ingredient.
      */
     public Ingredients(String title, double amount, Unit unit)
     {
@@ -28,15 +28,18 @@ public class Ingredients
     public double getAmount() {
         return amount;
     }
-
-    public Unit getUnit() {
-        return unit;
-    }
     
     public void setAmount(double amount) {
         this.amount = amount;
     }
     
+    public Unit getUnit() {
+        return unit;
+    }
+    
+    /**
+     * Returns readable representation of ingredient.
+     */
     @Override
     public String toString() {
         return amount + " " + unit + " " + title;

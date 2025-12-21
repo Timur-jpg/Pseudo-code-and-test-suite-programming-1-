@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 /**
  * Driver class for the Recipe Book application.
+ * 
+ * @author Jad Dayoub
+ * @version December 18, 2025
  */
 public class Driver {
     public static void main(String[] args) {
@@ -104,6 +107,9 @@ public class Driver {
         scanner.close();
     }
 
+    /**
+     * Prompts user to create a new recipe and add it to recipe book.
+     */
     private static void addRecipe(RecipeBook book, Scanner scanner) {
 
         System.out.print("Enter recipe title: ");
@@ -200,6 +206,9 @@ public class Driver {
         }
     }
 
+    /**
+     * Prints information for selected recipe.
+     */
     private static void printRecipeDetails(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title: ");
         String title = scanner.nextLine();
@@ -214,6 +223,9 @@ public class Driver {
         System.out.println("Recipe not found.");
     }
 
+    /**
+     * Allows user to rate recipe.
+     */
     private static void rateRecipe(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title to rate: ");
         String title = scanner.nextLine();
@@ -233,6 +245,9 @@ public class Driver {
         System.out.println("Recipe not found.");
     }
 
+    /**
+     * Scales recipe to given number of servings.
+     */
     private static void scaleRecipe(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title to scale: ");
         String title = scanner.nextLine();
@@ -252,6 +267,9 @@ public class Driver {
         System.out.println("Recipe not found.");
     }
 
+    /**
+     * Prints list of recipes returned from a search.
+     */
     private static void printSearchResults(List<Recipe> results) {
         if (results.isEmpty()) {
             System.out.println("No matching recipes found.");
