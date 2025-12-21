@@ -142,7 +142,7 @@ public class Recipe
         
         System.out.println("\nTags:");
         for (Tag t : tags) {
-            System.out.println(" #" + t);
+            System.out.println(t);
         }
         
     }

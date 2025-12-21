@@ -5,7 +5,6 @@ import java.util.Scanner;
  * Driver class for the Recipe Book application.
  */
 public class Driver {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         RecipeBook book = new RecipeBook("My Recipe Book");
@@ -115,7 +114,41 @@ public class Driver {
             return;
         }
 
-        Recipe recipe = new Recipe(title);
+        // Select recipe type (subclass)
+        System.out.println("Select recipe type:");
+        System.out.println("1) Main Course");
+        System.out.println("2) Dessert");
+        System.out.println("3) Drink");
+        System.out.print("Choose: ");
+
+        String typeChoice = scanner.nextLine();
+        Recipe recipe;
+
+        if (typeChoice.equals("1")) {
+            recipe = new MainCourse(title);
+            System.out.print("Is it spicy? (true/false): ");
+            ((MainCourse) recipe).setSpicy(Boolean.parseBoolean(scanner.nextLine()));
+        } else if (typeChoice.equals("2")) {
+            recipe = new Dessert(title);
+            System.out.print("Sweetness level (1-10): ");
+            try {
+                ((Dessert) recipe).setSweetnessLevel(
+                    Integer.parseInt(scanner.nextLine())
+                );
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Defaulting to 5.");
+                ((Dessert) recipe).setSweetnessLevel(5);
+            }
+
+        } else if (typeChoice.equals("3")) {
+            recipe = new Drink(title);
+            System.out.print("Is it alcoholic? (true/false): ");
+            ((Drink) recipe).setAlcoholic(Boolean.parseBoolean(scanner.nextLine()));
+
+        } else {
+            System.out.println("Invalid choice. Defaulting to Main Course.");
+            recipe = new MainCourse(title);
+        }
 
         // Ingredients
         while (true) {
@@ -151,12 +184,25 @@ public class Driver {
 
         book.addRecipe(recipe);
         System.out.println("Recipe added.");
+        
+        // Tags
+        while (true) {
+        System.out.print("Add tag? (y/n): ");
+        String yn = scanner.nextLine().toLowerCase();
+        if (!yn.equals("y")) break;
+        System.out.print("Enter tag: ");
+        try {
+            Tag tag = Tag.valueOf(scanner.nextLine().toUpperCase());
+            recipe.tags.add(tag); // or recipe.addTag(tag) if you have that method
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid tag.");
+        }
+        }
     }
 
     private static void printRecipeDetails(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title: ");
         String title = scanner.nextLine();
-
         for (Recipe r : book.getRecipes()) {
             if (r.getTitle().equals(title)) {
                 r.printDetails();
@@ -171,7 +217,6 @@ public class Driver {
     private static void rateRecipe(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title to rate: ");
         String title = scanner.nextLine();
-
         for (Recipe r : book.getRecipes()) {
             if (r.getTitle().equals(title)) {
                 System.out.print("Enter rating (1-5): ");
@@ -191,7 +236,6 @@ public class Driver {
     private static void scaleRecipe(RecipeBook book, Scanner scanner) {
         System.out.print("Enter recipe title to scale: ");
         String title = scanner.nextLine();
-
         for (Recipe r : book.getRecipes()) {
             if (r.getTitle().equals(title)) {
                 System.out.print("Enter new number of servings: ");
