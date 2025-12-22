@@ -32,7 +32,7 @@ public class RecipeBookTest {
     public void testAddRecipe() {
         Recipe recipe3 = new Recipe("Salad");
         book.addRecipe(recipe3);
-        assertEquals(2, book.getRecipes().size());
+        assertEquals(3, book.getRecipes().size());
     }
 
     @Test
