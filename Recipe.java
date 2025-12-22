@@ -55,6 +55,7 @@ public class Recipe
     public void addIngredient(Ingredients ingredient) {
         ingredients.add(ingredient);
     }
+    
     /**
      * Removes an ingredient by name.
      */
@@ -108,7 +109,7 @@ public class Recipe
      */
     public void addRating(int rating) {
         if (rating >= 1 && rating <= 5) {
-        ratings.add(rating);
+            ratings.add(rating);
         }
     }
 
@@ -136,7 +137,6 @@ public class Recipe
         System.out.println("\nIngredients:");
         for (Ingredients ing : ingredients) {
             System.out.println(" - " + ing.toString());
-
         }
         
         System.out.println("\nSteps:");
@@ -150,6 +150,5 @@ public class Recipe
         for (Tag t : tags) {
             System.out.println(t);
         }
-        
     }
 }
